@@ -80,7 +80,7 @@ class Order: ObservableObject, Codable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        type = try container.decode(Int.self, forKey: .extraFrosting)
+        type = try container.decode(Int.self, forKey: .type)
         quantity = try container.decode(Int.self, forKey: .quantity)
         
         extraFrosting = try container.decode(Bool.self, forKey: .extraFrosting)
